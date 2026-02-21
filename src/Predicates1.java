@@ -1,6 +1,7 @@
 import com.sun.security.jgss.GSSUtil;
 
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Predicates1 {
@@ -13,5 +14,8 @@ public class Predicates1 {
         System.out.println(string1.negate().test("Ashish"));
         Predicate<Object> predicate = Predicate.isEqual("Ashish");
         System.out.println(predicate.test("Ashish"));
+
+        Function<String, String> identityFunction = Function.identity();
+        System.out.println(identityFunction.apply("Ashish"));
     }
 }
